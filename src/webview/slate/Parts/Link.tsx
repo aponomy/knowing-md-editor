@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Descendant, Editor, Transforms, Range } from 'slate';
-import { ReactEditor, RenderElementProps, useSelected, useSlateStatic } from 'slate-react';
+import React from 'react';
+import { Descendant, Editor, Range, Transforms } from 'slate';
+import { RenderElementProps, useSelected } from 'slate-react';
 
 export type LinkElement = {
     type: 'link';

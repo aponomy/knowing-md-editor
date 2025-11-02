@@ -1,6 +1,6 @@
 import React from 'react';
+import { Editor, Element as SlateElement } from 'slate';
 import { useSlate } from 'slate-react';
-import { Editor, Transforms, Element as SlateElement } from 'slate';
 
 export const toggleEditorMark = (editor: Editor, format: 'strong' | 'emphasis' | 'underline' | 'code') => {
     const isActive = isMarkActive(editor, format);

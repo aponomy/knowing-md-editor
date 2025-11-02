@@ -28,7 +28,23 @@
         "command": "knowing-markdown-editor.openEditor",
         "title": "Open with Knowing Markdown Editor"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "knowing-markdown-editor.openEditor",
+          "when": "resourceLangId == markdown",
+          "group": "navigation"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "command": "knowing-markdown-editor.openEditor",
+          "when": "resourceLangId == markdown",
+          "group": "1_open"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
