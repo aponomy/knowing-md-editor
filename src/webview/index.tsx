@@ -8,7 +8,7 @@ declare const acquireVsCodeApi: () => any;
 const vscode = acquireVsCodeApi();
 
 // Message handler
-window.addEventListener('message', event => {
+window.addEventListener('message', (event: MessageEvent) => {
 	const message = event.data;
 	switch (message.type) {
 		case 'update':
@@ -29,7 +29,7 @@ if (root) {
 	reactRoot.render(
 		<React.StrictMode>
 			<SlateEditor
-				initialContent={window.initialContent || ''}
+				value={window.initialContent || ''}
 				onChange={(content: string) => {
 					vscode.postMessage({
 						type: 'update',
@@ -39,6 +39,7 @@ if (root) {
 				onReady={(instance: any) => {
 					window.editorInstance = instance;
 				}}
+				autofocus={true}
 			/>
 		</React.StrictMode>
 	);

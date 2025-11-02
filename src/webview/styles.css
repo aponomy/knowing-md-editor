@@ -117,3 +117,27 @@ body {
 	margin: 0.5em 0;
 	min-height: 1.5em;
 }
+
+/* Tracked Changes Styles */
+.tracked-change-insertion {
+	background-color: rgba(0, 255, 0, 0.2);
+	border-bottom: 2px solid rgba(0, 200, 0, 0.6);
+}
+
+.tracked-change-deletion {
+	background-color: rgba(255, 0, 0, 0.2);
+	border-bottom: 2px solid rgba(200, 0, 0, 0.6);
+	text-decoration: line-through;
+}
+
+/* Link Styles */
+[data-slate-editor] a {
+	color: var(--vscode-textLink-foreground);
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+[data-slate-editor] a:hover {
+	color: var(--vscode-textLink-activeForeground);
+}
+
